@@ -1,0 +1,18 @@
+{% extends 'storeapp/base.html' %}
+
+{% block tit %} Форма изменения товара {% endblock %}
+{% block answer %}
+
+{% if answer %}
+{{ answer }}
+{% else %}
+<form action='' method='post' enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}    <button type="submit">Загрузить рисунок</button>
+   <p> <input type="submit" value="Изменить товар"></p>
+
+</form>
+{% endif %}
+{% endblock %}
+
+

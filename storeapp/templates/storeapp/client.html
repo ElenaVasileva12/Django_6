@@ -1,0 +1,12 @@
+{% extends 'storeapp/base.html' %}
+{% block title %} {{ Клиент }} {% endblock %}
+
+{% block client %} {{ Клиент }}  {% endblock %}
+{% block content %}
+
+    <ul>
+        {% for i in Заказы %}
+            <li>{{ i }}</li>
+        {% endfor %}
+
+{% endblock %}

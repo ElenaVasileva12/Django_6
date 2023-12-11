@@ -1,0 +1,11 @@
+{% extends 'storeapp/base.html' %}
+
+<form action='' method='post'></form>
+{% block t %} Главная страница {% endblock %}
+<h2>{% block one %} Выберите что хотите посмотреть
+<form action='' method='post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Выбрать">
+
+{% endblock %}</h2>
